@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{71CBF562-187E-78B1-F247-B52B1C22E367}</ProjectGuid>
+    <ProjectGuid>{6C21D88D-BA96-53F0-1523-727D30FF6956}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -182,11 +182,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{E6088B18-E119-319B-7129-1F71B1DB101D}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{0DFD5147-4B03-6370-F98F-75956EDA9443}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{BBD808D2-CCD3-23DC-15B0-91D4169296B7}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{6C7CADA9-2C30-18F1-A93C-F2662A805073}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{EB83087F-A9AA-7E71-7B75-28E0B06440BE}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
+      <Project>{2A19C137-C8B1-CAE9-3576-A4D2B7E13A11}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
