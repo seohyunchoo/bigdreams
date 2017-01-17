@@ -23,7 +23,7 @@ Platform assembly: C:\Users\Roberto\Documents\bigdreams\TankBuild18_Data\Managed
 Loading C:\Users\Roberto\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
 Platform assembly: C:\Users\Roberto\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.VR.dll (this message is harmless)
 Loading C:\Users\Roberto\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
-- Completed reload, in  0.019 seconds
+- Completed reload, in  0.084 seconds
 Platform assembly: C:\Users\Roberto\Documents\bigdreams\TankBuild18_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Roberto\Documents\bigdreams\TankBuild18_Data\Managed\System.dll (this message is harmless)
 OnLevelWasLoaded was found on OVRScreenFade
@@ -35,3 +35,757 @@ Add a delegate to SceneManager.sceneLoaded instead to get notifications after sc
 desktop: 1280x1024 60Hz; virtual: 1280x1024 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.771064 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2e7c -> priority: 1 
+  Thread -> id: 2430 -> priority: 1 
+NullReferenceException: Object reference not set to an instance of an object
+  at SetupLocalPlayer.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.EnableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.EnableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundPlaying>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Complete.TankManager.DisableControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager.DisableTankControl () [0x00000] in <filename unknown>:0 
+  at Complete.GameManager+<RoundEnding>c__Iterator3.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+Complete.<GameLoop>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
