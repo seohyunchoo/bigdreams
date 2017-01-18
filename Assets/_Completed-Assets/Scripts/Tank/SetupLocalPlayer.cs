@@ -12,9 +12,9 @@ public class SetupLocalPlayer : NetworkBehaviour {
             GetComponent <Complete.TankMovement> ().enabled = true;
             GetComponent <Complete.TankShooting> ().enabled = true;
             GetComponentInChildren<Camera>().enabled = true;
-            Camera.main.transform.position = this.transform.position - this.transform.forward * 2 + this.transform.up * 3;
-            Camera.main.transform.LookAt(this.transform.position);
-            Camera.main.transform.parent = this.transform;
+            //Camera.main.transform.position = transform.position - transform.forward * 2 + transform.up * 3;
+            //Camera.main.transform.LookAt(transform.position);
+            //Camera.main.transform.parent = transform;
         }
 	}
 	

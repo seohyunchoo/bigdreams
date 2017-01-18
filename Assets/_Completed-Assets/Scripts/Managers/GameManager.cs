@@ -15,7 +15,6 @@ namespace Complete
         public GameObject m_TankPrefab;             // Reference to the prefab the players will control.
         public TankManager[] m_Tanks;               // A collection of managers for enabling and disabling different aspects of the tanks.
         public GameObject m_Network;
-        //public GameObject cameraRig;
 
         private int m_RoundNumber;                  // Which round the game is currently on.
         private WaitForSeconds m_StartWait;         // Used to have a delay whilst the round starts.
@@ -34,7 +33,7 @@ namespace Complete
             //SetCameraTargets();
 
             // Once the tanks have been created and the camera is using them as targets, start the game.
-            StartCoroutine (GameLoop ());
+            //StartCoroutine (GameLoop ());
         }
 
 

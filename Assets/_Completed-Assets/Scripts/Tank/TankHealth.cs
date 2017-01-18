@@ -22,10 +22,10 @@ namespace Complete
 
         private void Awake ()
         {
-            if (!isLocalPlayer)
-            {
-                return;
-            }
+            //if (!isLocalPlayer)
+            //{
+            //    return;
+            //}
             // Instantiate the explosion prefab and get a reference to the particle system on it.
             m_ExplosionParticles = Instantiate (m_ExplosionPrefab).GetComponent<ParticleSystem> ();
 
