@@ -12,11 +12,14 @@ namespace Complete
         public Color m_FullHealthColor = Color.green;       // The color the health bar will be when on full health.
         public Color m_ZeroHealthColor = Color.red;         // The color the health bar will be when on no health.
         public GameObject m_ExplosionPrefab;                // A prefab that will be instantiated in Awake, then used whenever the tank dies.
+        public float respawnTime;
+        private WaitForSeconds RespawnWait;
         
-        
+        private Transform SpawnPoint;
         private AudioSource m_ExplosionAudio;               // The audio source to play when the tank explodes.
         private ParticleSystem m_ExplosionParticles;        // The particle system the will play when the tank is destroyed.
-        private float m_CurrentHealth;                      // How much health the tank currently has.
+        [SyncVar(hook = "SetHealthUI")]
+        public float m_CurrentHealth;                      // How much health the tank currently has.
         private bool m_Dead;                                // Has the tank been reduced beyond zero health yet?
 
 
@@ -34,27 +37,27 @@ namespace Complete
 
             // Disable the prefab so it can be activated when it's required.
             m_ExplosionParticles.gameObject.SetActive (false);
+
+            // Store the spawn location
+            RespawnWait = new WaitForSeconds(respawnTime);
+            SpawnPoint = transform;
         }
 
 
         private void OnEnable()
         {
-            if (!isLocalPlayer)
-            {
-                return;
-            }
             // When the tank is enabled, reset the tank's health and whether or not it's dead.
             m_CurrentHealth = m_StartingHealth;
             m_Dead = false;
 
             // Update the health slider's value and color.
-            SetHealthUI();
+            SetHealthUI(m_CurrentHealth);
         }
 
 
         public void TakeDamage (float amount)
         {
-            if (!isLocalPlayer)
+            if (!isServer)
             {
                 return;
             }
@@ -62,51 +65,65 @@ namespace Complete
             m_CurrentHealth -= amount;
 
             // Change the UI elements appropriately.
-            SetHealthUI ();
+            //SetHealthUI (m_CurrentHealth);
 
             // If the current health is at or below zero and it has not yet been registered, call OnDeath.
             if (m_CurrentHealth <= 0f && !m_Dead)
             {
-                OnDeath ();
+                m_CurrentHealth = 0;
+                RpcOnDeath ();
             }
         }
 
 
-        private void SetHealthUI ()
+        private void SetHealthUI (float health)
         {
-            if (!isLocalPlayer)
-            {
-                return;
-            }
+            //if (!isLocalPlayer)
+            //{
+            //    return;
+            //}
             // Set the slider's value appropriately.
-            m_Slider.value = m_CurrentHealth;
+            m_Slider.value = health;
 
             // Interpolate the color of the bar between the choosen colours based on the current percentage of the starting health.
-            m_FillImage.color = Color.Lerp (m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
+            m_FillImage.color = Color.Lerp (m_ZeroHealthColor, m_FullHealthColor, health / m_StartingHealth);
         }
 
-
-        private void OnDeath ()
+        [ClientRpc]
+        private void RpcOnDeath ()
         {
-            if (!isLocalPlayer)
+            if (isLocalPlayer)
             {
-                return;
+                // Set the flag so that this function is only called once.
+                m_Dead = true;
+
+                // Move the instantiated explosion prefab to the tank's position and turn it on.
+                m_ExplosionParticles.transform.position = transform.position;
+                m_ExplosionParticles.gameObject.SetActive(true);
+
+                // Play the particle system of the tank exploding.
+                m_ExplosionParticles.Play();
+
+                // Play the tank explosion sound effect.
+                m_ExplosionAudio.Play();
+                transform.position = SpawnPoint.position;
+                m_Dead = false;
+                // Turn the tank off.
+                gameObject.SetActive(false);
+
+                // Wait 3 seconds before respawning at the original position
+                Invoke("resetPosition",respawnTime);
+
             }
-            // Set the flag so that this function is only called once.
-            m_Dead = true;
+        }
 
-            // Move the instantiated explosion prefab to the tank's position and turn it on.
-            m_ExplosionParticles.transform.position = transform.position;
-            m_ExplosionParticles.gameObject.SetActive (true);
-
-            // Play the particle system of the tank exploding.
-            m_ExplosionParticles.Play ();
-
-            // Play the tank explosion sound effect.
-            m_ExplosionAudio.Play();
-
-            // Turn the tank off.
-            gameObject.SetActive (false);
+        private void resetPosition()
+        {
+            // reset the tank's original position and parameters
+            transform.position = SpawnPoint.position;
+            transform.rotation = SpawnPoint.rotation;
+            m_Dead = false;
+            gameObject.SetActive(true);
         }
     }
 }

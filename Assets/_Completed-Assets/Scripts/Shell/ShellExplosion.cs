@@ -1,4 +1,5 @@
 using UnityEngine;
+//using UnityEngine.Networking;
 
 namespace Complete
 {
@@ -20,8 +21,10 @@ namespace Complete
         }
 
 
-        private void OnTriggerEnter (Collider other)
+        private void OnCollisionEnter (Collision collision)
         {
+            Collider other = collision.collider;
+            print(other);
 			// Collect all the colliders in a sphere from the shell's current position to a radius of the explosion radius.
             Collider[] colliders = Physics.OverlapSphere (transform.position, m_ExplosionRadius, m_TankMask);
 

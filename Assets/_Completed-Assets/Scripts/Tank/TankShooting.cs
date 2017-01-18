@@ -104,7 +104,9 @@ namespace Complete
 
             // Set the shell's velocity to the launch force in the fire position's forward direction.
             shell.GetComponent<Rigidbody>().velocity = m_LaunchForce * m_FireTransform.forward;
-            Physics.IgnoreCollision(shell.GetComponent<Rigidbody>().GetComponent<Collider>(), GetComponent<BoxCollider>());
+            //Physics.IgnoreCollision(shell.GetComponent<Rigidbody>().GetComponent<Collider>(), GetComponent<BoxCollider>());
+            Physics.IgnoreCollision(shell.GetComponent<CapsuleCollider>(), GetComponent<BoxCollider>());
+            
             NetworkServer.Spawn(shell);
 
             // Change the clip to the firing clip and play it.
