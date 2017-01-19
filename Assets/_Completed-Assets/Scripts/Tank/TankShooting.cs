@@ -64,7 +64,7 @@ namespace Complete
             //    CmdFire ();
             //}
             // Otherwise, if the fire button has just started being pressed...
-            if (Input.GetButtonDown (m_FireButton))
+            if (Input.GetKeyDown("m"))//(Input.GetButtonDown (m_FireButton))
             {
                 // ... reset the fired flag and reset the launch force.
                 m_Fired = false;
@@ -83,7 +83,7 @@ namespace Complete
             //    m_AimSlider.value = m_CurrentLaun chForce;
             //}
             // Otherwise, if the fire button is released and the shell hasn't been launched yet...
-            else if (Input.GetButtonUp (m_FireButton) && !m_Fired)
+            else if (Input.GetKeyUp("m") && !m_Fired) //(Input.GetButtonUp (m_FireButton) && !m_Fired)
             {
                 // ... launch the shell.
                 CmdFire ();
@@ -104,7 +104,7 @@ namespace Complete
 
             // Set the shell's velocity to the launch force in the fire position's forward direction.
             shell.GetComponent<Rigidbody>().velocity = m_LaunchForce * m_FireTransform.forward;
-            //Physics.IgnoreCollision(shell.GetComponent<Rigidbody>().GetComponent<Collider>(), GetComponent<BoxCollider>());
+            // to hopefully prevent collision between shooter and bullet
             Physics.IgnoreCollision(shell.GetComponent<CapsuleCollider>(), GetComponent<BoxCollider>());
             
             NetworkServer.Spawn(shell);
