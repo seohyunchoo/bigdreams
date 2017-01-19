@@ -12,12 +12,14 @@ namespace Complete
         public AudioClip m_EngineIdling;            // Audio to play when the tank isn't moving.
         public AudioClip m_EngineDriving;           // Audio to play when the tank is moving.
 		public float m_PitchRange = 0.2f;           // The amount by which the pitch of the engine noises can vary.
-
+        public Transform m_FireTransform;
+        public Transform m_TankTurret;
         private string m_MovementAxisName;          // The name of the input axis for moving forward and back.
         private string m_TurnAxisName;              // The name of the input axis for turning.
         private Rigidbody m_Rigidbody;              // Reference used to move the tank.
         private float m_MovementInputValue;         // The current value of the movement input.
         private float m_TurnInputValue;             // The current value of the turn input.
+        private float m_TurnTurretValue;
         private float m_OriginalPitch;              // The pitch of the audio source at the start of the scene.
         private ParticleSystem[] m_particleSystems; // References to all the particles systems used by the Tanks
 
@@ -83,17 +85,43 @@ namespace Complete
         }
 
 
-        private void Update ()
+        private void Update()
         {
+            int left = 0;
+            int right = 0;
+            int turret = 0;
             if (!isLocalPlayer)
             {
                 return;
             }
-            // Store the value of both input axes.
-            m_MovementInputValue = Input.GetAxis (m_MovementAxisName);
-            m_TurnInputValue = Input.GetAxis (m_TurnAxisName);
+            if (Input.GetKey("r"))
+            {
+                left = 1;
+            }
+            else if (Input.GetKey("f"))
+            {
+                left = -1;
+            }
 
-            EngineAudio ();
+            if (Input.GetKey("p"))
+            {
+                right = 1;
+            }
+            else if (Input.GetKey("l"))
+            {
+                right = -1;
+            }
+            if (Input.GetKey("e"))
+            {
+                turret = -1;
+            }
+            else if (Input.GetKey("["))
+            {
+                turret = 1;
+            }
+            m_MovementInputValue = (float)(left + right) / 2;
+            m_TurnInputValue = (float)(left - right) / 2;
+            m_TurnTurretValue = turret;
         }
 
 
@@ -138,6 +166,7 @@ namespace Complete
             // Adjust the rigidbodies position and orientation in FixedUpdate.
             Move ();
             Turn ();
+            TurnTurret();
         }
 
 
@@ -169,6 +198,27 @@ namespace Complete
 
             // Apply this rotation to the rigidbody's rotation.
             m_Rigidbody.MoveRotation (m_Rigidbody.rotation * turnRotation);
+        }
+
+
+        private void TurnTurret()
+        {
+            if (!isLocalPlayer)
+            {
+                return;
+            }
+            // Determine the number of degrees to be turned based on the input, speed and time between frames.
+            float turn = m_TurnTurretValue * m_TurnSpeed * Time.deltaTime;
+
+            // Make this into a rotation in the y axis.
+            Vector3 turnRotation = new Vector3 (0f, turn, 0f);
+            Quaternion rotation = Quaternion.Euler(0f, turn, 0f);
+            // Apply this rotation to the turret
+            m_TankTurret.Rotate(turnRotation); 
+
+            //m_FireTransform.position = rotation*m_FireTransform.position;
+            // Apply this rotation to the fire transform
+            //m_FireTransform.Rotate(turnRotation);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Complete
 
 
         private string m_FireButton;                // The input axis that is used for launching shells.
-        private float m_CurrentLaunchForce;         // The force that will be given to the shell when the fire button is released.
+        //private float m_CurrentLaunchForce;         // The force that will be given to the shell when the fire button is released.
         private float m_ChargeSpeed;                // How fast the launch force increases, based on the max charge time.
         private bool m_Fired;                       // Whether or not the shell has been launched with this button press.
 
@@ -80,7 +80,7 @@ namespace Complete
             //    // Increment the launch force and update the slider.
             //    m_CurrentLaunchForce += m_ChargeSpeed * Time.deltaTime;
             //
-            //    m_AimSlider.value = m_CurrentLaunchForce;
+            //    m_AimSlider.value = m_CurrentLaun chForce;
             //}
             // Otherwise, if the fire button is released and the shell hasn't been launched yet...
             else if (Input.GetButtonUp (m_FireButton) && !m_Fired)
