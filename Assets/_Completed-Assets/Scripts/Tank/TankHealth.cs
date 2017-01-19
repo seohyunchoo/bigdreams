@@ -15,7 +15,7 @@ namespace Complete
         public float respawnTime;
         private WaitForSeconds RespawnWait;
         
-        private Transform SpawnPoint;
+        private Vector3 SpawnPosition;
         private AudioSource m_ExplosionAudio;               // The audio source to play when the tank explodes.
         private ParticleSystem m_ExplosionParticles;        // The particle system the will play when the tank is destroyed.
         [SyncVar(hook = "SetHealthUI")]
@@ -25,10 +25,6 @@ namespace Complete
 
         private void Awake ()
         {
-            //if (!isLocalPlayer)
-            //{
-            //    return;
-            //}
             // Instantiate the explosion prefab and get a reference to the particle system on it.
             m_ExplosionParticles = Instantiate (m_ExplosionPrefab).GetComponent<ParticleSystem> ();
 
@@ -40,7 +36,7 @@ namespace Complete
 
             // Store the spawn location
             RespawnWait = new WaitForSeconds(respawnTime);
-            SpawnPoint = transform;
+            SpawnPosition = transform.position;
         }
 
 
@@ -78,10 +74,6 @@ namespace Complete
 
         private void SetHealthUI (float health)
         {
-            //if (!isLocalPlayer)
-            //{
-            //    return;
-            //}
             // Set the slider's value appropriately.
             m_Slider.value = health;
 
@@ -92,7 +84,7 @@ namespace Complete
         [ClientRpc]
         private void RpcOnDeath ()
         {
-            if (isLocalPlayer)
+            if (!isLocalPlayer)
             {
                 // Set the flag so that this function is only called once.
                 m_Dead = true;
@@ -106,22 +98,40 @@ namespace Complete
 
                 // Play the tank explosion sound effect.
                 m_ExplosionAudio.Play();
-                transform.position = SpawnPoint.position;
-                m_Dead = false;
+
                 // Turn the tank off.
                 gameObject.SetActive(false);
 
                 // Wait 3 seconds before respawning at the original position
                 Invoke("resetPosition",respawnTime);
+            }
+            else if (isLocalPlayer) 
+            {
+                // Set the flag so that this function is only called once.
+                m_Dead = true;
 
+                // Move the instantiated explosion prefab to the tank's position and turn it on.
+                m_ExplosionParticles.transform.position = transform.position;
+                m_ExplosionParticles.gameObject.SetActive(true);
+
+                // Play the particle system of the tank exploding.
+                m_ExplosionParticles.Play();
+
+                // Play the tank explosion sound effect.
+                m_ExplosionAudio.Play();
+
+                // Turn the tank off.
+                gameObject.SetActive(false);
+
+                // Wait 3 seconds before respawning at the original position
+                Invoke("resetPosition", respawnTime);
             }
         }
 
         private void resetPosition()
         {
             // reset the tank's original position and parameters
-            transform.position = SpawnPoint.position;
-            transform.rotation = SpawnPoint.rotation;
+            transform.position = SpawnPosition;
             m_Dead = false;
             gameObject.SetActive(true);
         }
