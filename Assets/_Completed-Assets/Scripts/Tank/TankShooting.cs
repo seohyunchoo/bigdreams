@@ -15,6 +15,7 @@ namespace Complete
         public AudioClip m_ChargingClip;            // Audio that plays when each shot is charging up.
         public AudioClip m_FireClip;                // Audio that plays when each shot is fired.
         public float m_LaunchForce;
+        public float m_SlowByAmount;
         //public float m_MinLaunchForce = 15f;        // The force given to the shell if the fire button is not held.
         //public float m_MaxLaunchForce = 30f;        // The force given to the shell if the fire button is held for the max charge time.
         public float m_MaxChargeTime = 0.75f;       // How long the shell can charge for before it is fired at max force.
@@ -137,7 +138,7 @@ namespace Complete
                 m_FireTransform.rotation);
 
             // Set the shell's velocity to the launch force in the fire position's forward direction.
-            shell.GetComponent<Rigidbody>().velocity = m_LaunchForce * m_FireTransform.forward;
+            shell.GetComponent<Rigidbody>().velocity = (m_LaunchForce/m_SlowByAmount) * m_FireTransform.forward;
             // to hopefully prevent collision between shooter and bullet
             Physics.IgnoreCollision(shell.GetComponent<CapsuleCollider>(), GetComponent<BoxCollider>());
 
