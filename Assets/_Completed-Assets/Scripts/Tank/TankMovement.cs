@@ -87,13 +87,13 @@ namespace Complete
 
         private void Update()
         {
-            int left = 0;
-            int right = 0;
-            int turret = 0;
             if (!isLocalPlayer)
             {
                 return;
             }
+            int left = 0;
+            int right = 0;
+            int turret = 0;
             if (Input.GetKey("r"))
             {
                 left = 1;
