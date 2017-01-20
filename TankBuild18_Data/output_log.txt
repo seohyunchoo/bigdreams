@@ -23,15 +23,23 @@ Platform assembly: C:\Users\Roberto\Documents\bigdreams\TankBuild18_Data\Managed
 Loading C:\Users\Roberto\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
 Platform assembly: C:\Users\Roberto\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.VR.dll (this message is harmless)
 Loading C:\Users\Roberto\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
-- Completed reload, in  0.109 seconds
+- Completed reload, in  0.020 seconds
 Platform assembly: C:\Users\Roberto\Documents\bigdreams\TankBuild18_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Roberto\Documents\bigdreams\TankBuild18_Data\Managed\System.dll (this message is harmless)
-desktop: 1280x1024 60Hz; virtual: 2304x1024 at 0,0
+desktop: 1024x768 60Hz; virtual: 1024x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-desktop: 1024x768 60Hz; virtual: 2304x1024 at 0,0
+desktop: 1024x768 60Hz; virtual: 1024x768 at 0,0
 <RI> Initialized touch support.
-Overlay is using an unsupported compressed pixel format.UnloadTime: 0.804789 ms
+Overlay is using an unsupported compressed pixel format.UnloadTime: 0.791759 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 22a8 -> priority: 1 
-  Thread -> id: 1220 -> priority: 1 
+  Thread -> id: 1644 -> priority: 1 
+  Thread -> id: 29c4 -> priority: 1 
+MatchMakingClient Create :https://mm.unet.unity3d.com/json/reply/CreateMatchRequest
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+MatchMakingClient DropConnection :https://mm.unet.unity3d.com/json/reply/DropConnectionRequest
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
