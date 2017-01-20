@@ -121,6 +121,26 @@ namespace Complete
             }
             m_MovementInputValue = (float)(left + right) / 2;
             m_TurnInputValue = (float)(left - right) / 2;
+            if (Input.GetKey("w"))
+            {
+                m_MovementInputValue = 1;
+                m_TurnInputValue = 0;
+            }
+            if (Input.GetKey("s"))
+            {
+                m_MovementInputValue = -1;
+                m_TurnInputValue = 0;
+            }
+            if (Input.GetKey("t"))
+            {
+                m_MovementInputValue = 0;
+                m_TurnInputValue = -1;
+            }
+            if (Input.GetKey("y"))
+            {
+                m_MovementInputValue = 0;
+                m_TurnInputValue = 1;
+            }
             m_TurnTurretValue = turret;
         }
 
