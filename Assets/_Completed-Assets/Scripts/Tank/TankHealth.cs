@@ -40,6 +40,7 @@ namespace Complete
             // Store the spawn location
             RespawnWait = new WaitForSeconds(respawnTime);
             SpawnPosition = transform.position;
+			numDeaths = 0;
         }
 
 
