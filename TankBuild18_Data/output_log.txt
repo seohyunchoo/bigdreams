@@ -23,7 +23,7 @@ Platform assembly: C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Manage
 Loading C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
 Platform assembly: C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.VR.dll (this message is harmless)
 Loading C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
-- Completed reload, in  0.158 seconds
+- Completed reload, in  0.257 seconds
 Platform assembly: C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\System.dll (this message is harmless)
 desktop: 1440x900 60Hz; virtual: 1440x900 at 0,0
@@ -32,6 +32,56 @@ desktop: 1440x900 60Hz; virtual: 1440x900 at 0,0
 <RI> Initialized touch support.
 ovr_Create(&m_session, &luid) failed: ovr_Create: No HMD attached.
 Failed to create Oculus Session.Compositor failed to initialize.ovr_Create(&m_session, &luid) failed: ovr_Create: No HMD attached.
-Failed to create Oculus Session.Compositor failed to initialize.UnloadTime: 1.781759 ms
+Failed to create Oculus Session.Compositor failed to initialize.UnloadTime: 1.854330 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 650 -> priority: 1 
+  Thread -> id: 94c -> priority: 1 
+Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported in Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "MPTank(Clone)/TankRenderers/TankTurret/Cockpit/Back", Mesh asset path "" Mesh name "Quad"
+ 
+(Filename:  Line: 0)
+
+Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported in Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "MPTank(Clone)/TankRenderers/TankTurret/Cockpit/Roof", Mesh asset path "" Mesh name "Quad"
+ 
+(Filename:  Line: 0)
+
+Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported in Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "MPTank(Clone)/TankRenderers/TankTurret/Cockpit/Floor", Mesh asset path "" Mesh name "Quad"
+ 
+(Filename:  Line: 0)
+
+Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported in Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "MPTank(Clone)/TankRenderers/TankTurret/Cockpit/ControlPanel", Mesh asset path "" Mesh name "Quad"
+ 
+(Filename:  Line: 0)
+
+Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported in Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "MPTank(Clone)/TankRenderers/TankTurret/Cockpit/RightPanel", Mesh asset path "" Mesh name "Quad"
+ 
+(Filename:  Line: 0)
+
+Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported in Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "MPTank(Clone)/TankRenderers/TankTurret/Cockpit/FrontRoof", Mesh asset path "" Mesh name "Quad"
+ 
+(Filename:  Line: 0)
+
+Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported in Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "MPTank(Clone)/TankRenderers/TankTurret/Cockpit/MinimapPanel", Mesh asset path "" Mesh name "Quad"
+ 
+(Filename:  Line: 0)
+
+Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported in Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "MPTank(Clone)/TankRenderers/TankTurret/Cockpit/UpperFront", Mesh asset path "" Mesh name "Quad"
+ 
+(Filename:  Line: 0)
+
+Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported in Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "MPTank(Clone)/TankRenderers/TankTurret/Cockpit/LowerFront", Mesh asset path "" Mesh name "Quad"
+ 
+(Filename:  Line: 0)
+
+Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported in Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "MPTank(Clone)/TankRenderers/TankTurret/Cockpit/LeftPanel", Mesh asset path "" Mesh name "Quad"
+ 
+(Filename:  Line: 0)
+

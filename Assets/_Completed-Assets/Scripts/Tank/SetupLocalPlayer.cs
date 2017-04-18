@@ -5,6 +5,7 @@ using UnityEngine.Networking;
 
 public class SetupLocalPlayer : NetworkBehaviour {
     // Use this for initialization
+	public GameObject TankTurret;
     void Start () {
 		if (isLocalPlayer)
         {   
@@ -12,9 +13,11 @@ public class SetupLocalPlayer : NetworkBehaviour {
             GetComponent <Complete.TankMovement> ().enabled = true;
             GetComponent <Complete.TankShooting> ().enabled = true;
             GetComponentInChildren<Camera>().enabled = true;
-            //Camera.main.transform.position = transform.position - transform.forward * 2 + transform.up * 3;
-            //Camera.main.transform.LookAt(transform.position);
-            //Camera.main.transform.parent = transform;
+			//Disable child TankTurret's Mesh Renderer 
+			TankTurret.GetComponent<MeshRenderer> ().enabled = false;
+			//Make minimap camera a child of the tank turret
+
+			//GetComponentInChildren<>
         }
 	}
 	
