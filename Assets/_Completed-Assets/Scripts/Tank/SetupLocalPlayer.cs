@@ -13,10 +13,11 @@ public class SetupLocalPlayer : NetworkBehaviour {
             GetComponent <Complete.TankMovement> ().enabled = true;
             GetComponent <Complete.TankShooting> ().enabled = true;
             GetComponentInChildren<Camera>().enabled = true;
-			//Disable child TankTurret's Mesh Renderer 
+			//Disable child TankTurret's Mesh Renderer
 			TankTurret.GetComponent<MeshRenderer> ().enabled = false;
 			//Make minimap camera a child of the tank turret
-
+			GameObject minimapCam = GameObject.FindGameObjectWithTag("MinimapCamera");
+			minimapCam.transform.SetParent (TankTurret.transform,false);
 			//GetComponentInChildren<>
         }
 	}

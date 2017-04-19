@@ -12,11 +12,13 @@ namespace Complete
         public Color m_FullHealthColor = Color.green;       // The color the health bar will be when on full health.
         public Color m_ZeroHealthColor = Color.red;         // The color the health bar will be when on no health.
         public GameObject m_ExplosionPrefab;                // A prefab that will be instantiated in Awake, then used whenever the tank dies.
-        public float respawnTime;
+		public GameObject TankTurret;
+		public float respawnTime;
 		private float numDeaths;
         private WaitForSeconds RespawnWait;
         
-        private Vector3 SpawnPosition;
+		private Vector3 SpawnPosition;
+		private Quaternion SpawnRotation;
         private AudioSource m_ExplosionAudio;               // The audio source to play when the tank explodes.
         private ParticleSystem m_ExplosionParticles;        // The particle system the will play when the tank is destroyed.
         
@@ -39,7 +41,8 @@ namespace Complete
 
             // Store the spawn location
             RespawnWait = new WaitForSeconds(respawnTime);
-            SpawnPosition = transform.position;
+			SpawnPosition = transform.position;
+			SpawnRotation = transform.rotation;
 			numDeaths = 0;
         }
 
@@ -129,7 +132,7 @@ namespace Complete
                 gameObject.SetActive(false);
 
 				// Update the scoreboard
-
+				numDeaths++;
 
                 // Wait 3 seconds before respawning at the original position
                 Invoke("resetPosition", respawnTime);
@@ -140,6 +143,8 @@ namespace Complete
         {
             // reset the tank's original position and parameters
             transform.position = SpawnPosition;
+			transform.rotation = SpawnRotation;
+			TankTurret.transform.localRotation = Quaternion.Euler (0, 0, 0);
             m_Dead = false;
             gameObject.SetActive(true);
         }

@@ -95,6 +95,7 @@ namespace Complete
             }
             else if (Input.GetKeyUp("c") && !m_Fired && !m_usedSuper)
             {
+				m_usedSuper = true;
                 CmdSuperFire();
             }
         }
