@@ -23,7 +23,7 @@ Platform assembly: C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Manage
 Loading C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
 Platform assembly: C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.VR.dll (this message is harmless)
 Loading C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
-- Completed reload, in  0.193 seconds
+- Completed reload, in  0.194 seconds
 Platform assembly: C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\System.dll (this message is harmless)
 desktop: 1440x900 60Hz; virtual: 1440x900 at 0,0
@@ -32,6 +32,78 @@ desktop: 1440x900 60Hz; virtual: 1440x900 at 0,0
 <RI> Initialized touch support.
 ovr_Create(&m_session, &luid) failed: ovr_Create: No HMD attached.
 Failed to create Oculus Session.Compositor failed to initialize.ovr_Create(&m_session, &luid) failed: ovr_Create: No HMD attached.
-Failed to create Oculus Session.Compositor failed to initialize.UnloadTime: 3.978015 ms
+Failed to create Oculus Session.Compositor failed to initialize.UnloadTime: 1.862788 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: e74 -> priority: 1 
+  Thread -> id: f14 -> priority: 1 
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+

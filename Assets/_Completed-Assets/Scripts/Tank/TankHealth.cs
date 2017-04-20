@@ -15,6 +15,7 @@ namespace Complete
 		public GameObject TankTurret;
 		public float respawnTime;
 		private float numDeaths;
+		private float numKills;
         private WaitForSeconds RespawnWait;
         
 		private Vector3 SpawnPosition;
@@ -44,6 +45,7 @@ namespace Complete
 			SpawnPosition = transform.position;
 			SpawnRotation = transform.rotation;
 			numDeaths = 0;
+			numKills = 0;
         }
 
 
@@ -73,9 +75,16 @@ namespace Complete
             // If the current health is at or below zero and it has not yet been registered, call OnDeath.
             if (m_CurrentHealth <= 0f && !m_Dead)
             {
-				
+				GameObject[] players = GameObject.FindGameObjectsWithTag ("MainPlayer");
+				for (int i = 0; i < players.Length; i++) {
+					Debug.Log (i.ToString());
+					if (!gameObject.Equals (players [i])) {
+						players [i].GetComponent<TankHealth> ().RpcOnKill ();
+					}
+				}
                 m_CurrentHealth = 0;
                 RpcOnDeath ();
+
             }
         }
 
@@ -88,6 +97,24 @@ namespace Complete
             // Interpolate the color of the bar between the choosen colours based on the current percentage of the starting health.
             m_FillImage.color = Color.Lerp (m_ZeroHealthColor, m_FullHealthColor, health / m_StartingHealth);
         }
+
+		[ClientRpc]
+		public void RpcOnKill() {
+			// Set the flag so that this function is only called once.
+			//m_Dead = true;
+
+			// Turn the tank off.
+			gameObject.SetActive(false);
+
+			// Update the scoreboard
+			numKills++;
+
+			// Wait 3 seconds before respawning at the original position
+			Invoke("resetPosition", respawnTime);
+		
+		}
+
+
 
         [ClientRpc]
         private void RpcOnDeath ()
@@ -109,6 +136,8 @@ namespace Complete
 
                 // Turn the tank off.
                 gameObject.SetActive(false);
+
+				numDeaths++;
 
                 // Wait 3 seconds before respawning at the original position
                 Invoke("resetPosition",respawnTime);
@@ -139,7 +168,15 @@ namespace Complete
             }
         }
 
-        private void resetPosition()
+		private void resetPlayers() {
+			GameObject[] players = GameObject.FindGameObjectsWithTag ("MainPlayer");
+			for (int i = 0; i < players.Length; i++) {
+				Debug.Log (i.ToString());
+				players [i].GetComponent<TankHealth>().resetPosition();
+			}
+		}
+
+        public void resetPosition()
         {
             // reset the tank's original position and parameters
             transform.position = SpawnPosition;
