@@ -13,6 +13,9 @@ namespace Complete
         public Color m_ZeroHealthColor = Color.red;         // The color the health bar will be when on no health.
         public GameObject m_ExplosionPrefab;                // A prefab that will be instantiated in Awake, then used whenever the tank dies.
 		public GameObject TankTurret;
+		public GameObject killScore;
+		public GameObject deathScore;
+		public GameObject warningSign;
 		public float respawnTime;
 		private float numDeaths;
 		private float numKills;
@@ -25,7 +28,7 @@ namespace Complete
         
 
 		[SyncVar(hook = "SetHealthUI")]
-        public float m_CurrentHealth;                      // How much health the tank currently has.
+		private float m_CurrentHealth;                      // How much health the tank currently has.
         private bool m_Dead;                                // Has the tank been reduced beyond zero health yet?
 
 
@@ -46,6 +49,8 @@ namespace Complete
 			SpawnRotation = transform.rotation;
 			numDeaths = 0;
 			numKills = 0;
+			m_CurrentHealth = m_StartingHealth;
+			warningSign.GetComponent<MeshRenderer> ().enabled = false;
         }
 
 
@@ -54,9 +59,11 @@ namespace Complete
             // When the tank is enabled, reset the tank's health and whether or not it's dead.
             m_CurrentHealth = m_StartingHealth;
             m_Dead = false;
-
+			killScore.GetComponent<TextMesh>().text = numKills.ToString();
+			deathScore.GetComponent<TextMesh> ().text = numDeaths.ToString();
             // Update the health slider's value and color.
             SetHealthUI(m_CurrentHealth);
+			warningSign.GetComponent<MeshRenderer> ().enabled = false;
         }
 
 
@@ -71,6 +78,9 @@ namespace Complete
 
             // Change the UI elements appropriately.
             //SetHealthUI (m_CurrentHealth);
+			if (m_CurrentHealth < 32) {
+				warningSign.GetComponent<MeshRenderer> ().enabled = true;
+			}
 
             // If the current health is at or below zero and it has not yet been registered, call OnDeath.
             if (m_CurrentHealth <= 0f && !m_Dead)
@@ -83,6 +93,7 @@ namespace Complete
 					}
 				}
                 m_CurrentHealth = 0;
+				warningSign.GetComponent<MeshRenderer> ().enabled = false;
                 RpcOnDeath ();
 
             }
@@ -93,6 +104,9 @@ namespace Complete
         {
             // Set the slider's value appropriately.
             m_Slider.value = health;
+			if (health < 32) {
+				warningSign.GetComponent<MeshRenderer> ().enabled = true;
+			}
 
             // Interpolate the color of the bar between the choosen colours based on the current percentage of the starting health.
             m_FillImage.color = Color.Lerp (m_ZeroHealthColor, m_FullHealthColor, health / m_StartingHealth);
@@ -179,6 +193,7 @@ namespace Complete
         public void resetPosition()
         {
             // reset the tank's original position and parameters
+			m_CurrentHealth = m_StartingHealth;
             transform.position = SpawnPosition;
 			transform.rotation = SpawnRotation;
 			TankTurret.transform.localRotation = Quaternion.Euler (0, 0, 0);
