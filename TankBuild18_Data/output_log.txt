@@ -23,7 +23,7 @@ Platform assembly: C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Manage
 Loading C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
 Platform assembly: C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.VR.dll (this message is harmless)
 Loading C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
-- Completed reload, in  0.183 seconds
+- Completed reload, in  0.192 seconds
 Platform assembly: C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Maverick\Documents\bigdreams\TankBuild18_Data\Managed\System.dll (this message is harmless)
 desktop: 1440x900 60Hz; virtual: 1440x900 at 0,0
@@ -32,9 +32,9 @@ desktop: 1440x900 60Hz; virtual: 1440x900 at 0,0
 <RI> Initialized touch support.
 ovr_Create(&m_session, &luid) failed: ovr_Create: No HMD attached.
 Failed to create Oculus Session.Compositor failed to initialize.ovr_Create(&m_session, &luid) failed: ovr_Create: No HMD attached.
-Failed to create Oculus Session.Compositor failed to initialize.UnloadTime: 1.766176 ms
+Failed to create Oculus Session.Compositor failed to initialize.UnloadTime: 1.712305 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 10c -> priority: 1 
+  Thread -> id: f2c -> priority: 1 
 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)

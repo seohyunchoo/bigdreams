@@ -116,16 +116,16 @@ namespace Complete
 		public void RpcOnKill() {
 			// Set the flag so that this function is only called once.
 			//m_Dead = true;
+			if (isLocalPlayer) {
+				// Turn the tank off.
+				gameObject.SetActive(false);
 
-			// Turn the tank off.
-			gameObject.SetActive(false);
-
-			// Update the scoreboard
-			numKills++;
-
-			// Wait 3 seconds before respawning at the original position
-			Invoke("resetPosition", respawnTime);
-		
+				// Update the scoreboard
+				numKills++;
+				GameObject.FindGameObjectWithTag ("EndRoundText").GetComponent<Text>().text += "The enemy was destroyed!";
+				// Wait 3 seconds before respawning at the original position
+				Invoke("resetPosition", respawnTime);
+			}
 		}
 
 
@@ -133,30 +133,31 @@ namespace Complete
         [ClientRpc]
         private void RpcOnDeath ()
         {
-            if (!isLocalPlayer)
-            {
-                // Set the flag so that this function is only called once.
-                m_Dead = true;
-
-                // Move the instantiated explosion prefab to the tank's position and turn it on.
-                m_ExplosionParticles.transform.position = transform.position;
-                m_ExplosionParticles.gameObject.SetActive(true);
-
-                // Play the particle system of the tank exploding.
-                m_ExplosionParticles.Play();
-
-                // Play the tank explosion sound effect.
-                m_ExplosionAudio.Play();
-
-                // Turn the tank off.
-                gameObject.SetActive(false);
-
-				numDeaths++;
-
-                // Wait 3 seconds before respawning at the original position
-                Invoke("resetPosition",respawnTime);
-            }
-            else if (isLocalPlayer) 
+//            if (!isLocalPlayer)
+//            {
+//                // Set the flag so that this function is only called once.
+//                m_Dead = true;
+//
+//                // Move the instantiated explosion prefab to the tank's position and turn it on.
+//                m_ExplosionParticles.transform.position = transform.position;
+//                m_ExplosionParticles.gameObject.SetActive(true);
+//
+//                // Play the particle system of the tank exploding.
+//                m_ExplosionParticles.Play();
+//
+//                // Play the tank explosion sound effect.
+//                m_ExplosionAudio.Play();
+//
+//                // Turn the tank off.
+//                gameObject.SetActive(false);
+//
+//				numDeaths++;
+//				GameObject.FindGameObjectWithTag ("EndRoundText").GetComponent<Text>().text += "You were blown up!";
+//                // Wait 3 seconds before respawning at the original position
+//                Invoke("resetPosition",respawnTime);
+//            }
+//            else 
+				if (isLocalPlayer) 
             {
                 // Set the flag so that this function is only called once.
                 m_Dead = true;
@@ -176,19 +177,11 @@ namespace Complete
 
 				// Update the scoreboard
 				numDeaths++;
-
+				GameObject.FindGameObjectWithTag ("EndRoundText").GetComponent<Text>().text += "You were blown up!";
                 // Wait 3 seconds before respawning at the original position
                 Invoke("resetPosition", respawnTime);
             }
         }
-
-		private void resetPlayers() {
-			GameObject[] players = GameObject.FindGameObjectsWithTag ("MainPlayer");
-			for (int i = 0; i < players.Length; i++) {
-				Debug.Log (i.ToString());
-				players [i].GetComponent<TankHealth>().resetPosition();
-			}
-		}
 
         public void resetPosition()
         {
@@ -198,6 +191,7 @@ namespace Complete
 			transform.rotation = SpawnRotation;
 			TankTurret.transform.localRotation = Quaternion.Euler (0, 0, 0);
             m_Dead = false;
+			GameObject.FindGameObjectWithTag ("EndRoundText").GetComponent<Text>().text = "";
             gameObject.SetActive(true);
         }
     }
