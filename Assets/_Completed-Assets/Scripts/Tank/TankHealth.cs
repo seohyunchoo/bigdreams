@@ -16,10 +16,13 @@ namespace Complete
 		public GameObject killScore;
 		public GameObject deathScore;
 		public GameObject warningSign;
+		public GameObject spawnPoint1;
+		public GameObject spawnPoint2;
 		public float respawnTime;
 		private float numDeaths;
 		private float numKills;
         private WaitForSeconds RespawnWait;
+		private GameObject mySpawnPoint;
         
 		private Vector3 SpawnPosition;
 		private Quaternion SpawnRotation;
@@ -34,6 +37,8 @@ namespace Complete
 
         private void Awake ()
         {
+			SpawnPosition = transform.position;
+			SpawnRotation = transform.rotation;
             // Instantiate the explosion prefab and get a reference to the particle system on it.
             m_ExplosionParticles = Instantiate (m_ExplosionPrefab).GetComponent<ParticleSystem> ();
 
@@ -43,10 +48,8 @@ namespace Complete
             // Disable the prefab so it can be activated when it's required.
             m_ExplosionParticles.gameObject.SetActive (false);
 
-            // Store the spawn location
             RespawnWait = new WaitForSeconds(respawnTime);
-			SpawnPosition = transform.position;
-			SpawnRotation = transform.rotation;
+
 			numDeaths = 0;
 			numKills = 0;
 			m_CurrentHealth = m_StartingHealth;
@@ -66,6 +69,21 @@ namespace Complete
 			warningSign.GetComponent<MeshRenderer> ().enabled = false;
         }
 
+		public void setSpawnPosition(Vector3 pos) {
+			SpawnPosition = pos;
+		}
+
+		public void setSpawnRotation(Quaternion rot) {
+			SpawnRotation = rot;
+		}
+
+		public Vector3 getSpawnPosition() {
+			return SpawnPosition;
+		}
+
+		public Transform getMySpawnPoint() {
+			return mySpawnPoint.transform;
+		}
 
         public void TakeDamage (float amount)
         {
@@ -87,7 +105,6 @@ namespace Complete
             {
 				GameObject[] players = GameObject.FindGameObjectsWithTag ("MainPlayer");
 				for (int i = 0; i < players.Length; i++) {
-					Debug.Log (i.ToString());
 					if (!gameObject.Equals (players [i])) {
 						players [i].GetComponent<TankHealth> ().RpcOnKill ();
 					}
@@ -187,12 +204,12 @@ namespace Complete
         {
             // reset the tank's original position and parameters
 			m_CurrentHealth = m_StartingHealth;
-            transform.position = SpawnPosition;
-			transform.rotation = SpawnRotation;
 			TankTurret.transform.localRotation = Quaternion.Euler (0, 0, 0);
             m_Dead = false;
 			GameObject.FindGameObjectWithTag ("EndRoundText").GetComponent<Text>().text = "";
             gameObject.SetActive(true);
+			transform.position = SpawnPosition;
+			transform.rotation = SpawnRotation;
         }
     }
 }
